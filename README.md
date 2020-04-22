@@ -47,15 +47,6 @@ Download the app. Extract the zip file. go inside project folder and run this do
 ## Unit/Integeration Test
 * The project having integeration test for all endpoint with Junit.
 
-## DB using H2
-* The project using H2 simple in memory DB.
-* You can access the H2 console [HERE](http://localhost:8080/h2).
-* username: sa password: sa
-
-## Authentication
-* The project using Spring Security for basic Authentication.
-* username: user password: user123
-
 ## API Documentation
 * [Swagger API Documentation](http://localhost:8080/swagger-ui.html)
 
