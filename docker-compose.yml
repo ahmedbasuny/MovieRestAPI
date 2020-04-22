@@ -1,20 +1,21 @@
-version: "3.7"
+version: "3"
 services:
-  mysql-db:
+  mysqldb:
     image: mysql:8
     environment:
-      - MYSQL_ROOT_PASSWORD=123
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: Movie
     volumes:
-      - movie-mysql:/var/lib/mysql
+      movie-mysql: /var/lib/mysql
     ports:
-      - "3301:3301"
+      - "3306:3306"
 
   movie-api:
     image: image_movie:0.0.1-SNAPSHOT
     depends_on:
-      - mysql-db
+      - mysqldb
     ports:
-    - 3000:3000
+      - "8080:8080"
 
 volumes:
   movie-mysql:

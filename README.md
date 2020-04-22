@@ -12,7 +12,7 @@ can list movies, delete movie, update movie, add new movie.
 ### Build and Run
 * Build with Maven.
 
-Download the app. Extract the zip file. go inside project folder and run this maven commend.
+Download the app. Extract the zip file. go inside project folder and run this maven commend to build the image.
 
 `$ mvn clean package spring-boot:repackage dockerfile:build`
 
