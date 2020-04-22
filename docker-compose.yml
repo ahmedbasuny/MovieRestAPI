@@ -1,0 +1,20 @@
+version: "3.7"
+services:
+  mysql-db:
+    image: mysql:8
+    environment:
+      - MYSQL_ROOT_PASSWORD=123
+    volumes:
+      - movie-mysql:/var/lib/mysql
+    ports:
+      - "3301:3301"
+
+  movie-api:
+    image: image_movie:0.0.1-SNAPSHOT
+    depends_on:
+      - mysql-db
+    ports:
+    - 3000:3000
+
+volumes:
+  movie-mysql:
